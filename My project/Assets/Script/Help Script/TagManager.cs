@@ -30,9 +30,14 @@ public class AnimationTags
     public const string PUNCH3 = "Punch3";
     public const string KICK1 = "Kick1";
     public const string KICK2 = "Kick2";
-    public const string DEATH = "Death";
+
     public const string ATTACK1 = "Attack1";
     public const string ATTACK2 = "Attack2";
-    public const string ATTACK3 = "Attack1";
+    public const string ATTACK3 = "Attack3";
+    public const int ATTACK_AIM_COUNT = 3;
     public const string IDLE_ANIMATION = "Idle";
+    public const string KNOCK_DOWN = "KnockDown";
+    public const string STAND_UP = "StandUp";
+    public const string HIT = "Hit";
+    public const string DEATH = "Death";
 }

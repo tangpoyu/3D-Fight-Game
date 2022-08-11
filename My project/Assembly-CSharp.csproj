@@ -57,8 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Player Script\PlayerMovement.cs" />
-    <Compile Include="Assets\Script\Help Script\TagManager.cs" />
+    <Compile Include="Assets\Script\Enemy Script\EnemyAnimation.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerAnimation.cs" />
+    <Compile Include="Assets\Script\Enemy Script\EnemyMovement.cs" />
+    <Compile Include="Assets\Script\Help Script\TagManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\AdditiveTint.shader" />
