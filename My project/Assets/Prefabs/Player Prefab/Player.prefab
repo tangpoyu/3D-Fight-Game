@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1730223216934679666}
   - component: {fileID: 1730223216934679664}
   - component: {fileID: 1730223216934679665}
+  - component: {fileID: 1730223217529617381}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -64,6 +65,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1730223217529617381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730223216934679667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae299508c13b3548a4503b74ba3e270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 2
+  zSpeed: 2
+  rotationSpeed: 2
 --- !u!1001 &1730223217566918112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,3 +154,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
   m_PrefabInstance: {fileID: 1730223217566918112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1730223217566819054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+  m_PrefabInstance: {fileID: 1730223217566918112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1730223217529617383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730223217566819054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00f85b335f8c4d4194a065c0fa5defc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

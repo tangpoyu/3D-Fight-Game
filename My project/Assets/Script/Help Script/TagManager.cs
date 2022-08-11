@@ -30,6 +30,7 @@ public class AnimationTags
     public const string PUNCH3 = "Punch3";
     public const string KICK1 = "Kick1";
     public const string KICK2 = "Kick2";
+    public const string DEATH = "Death";
     public const string ATTACK1 = "Attack1";
     public const string ATTACK2 = "Attack2";
     public const string ATTACK3 = "Attack1";
