@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour
+public class PlayerAnimation : MonoBehaviour, CharacterAnimation
 {
     private Animator animator;
 
@@ -39,6 +39,26 @@ public class PlayerAnimation : MonoBehaviour
     public void Kick2()
     {
         animator.SetTrigger(AnimationTags.KICK2);
+    }
+
+    public void Idle()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void KnockDown()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void StandUp()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Hit()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Death()

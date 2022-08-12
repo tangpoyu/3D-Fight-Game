@@ -26,10 +26,15 @@ public class AnimationTags
 {
     public const string WALK = "Walk";
     public const string PUNCH1 = "Punch1";
+    public const string PUNCH1_MOTITION_NAME = "Player Punch1";
     public const string PUNCH2 = "Punch2";
+    public const string PUNCH2_MOTITION_NAME = "Player Punch2";
     public const string PUNCH3 = "Punch3";
+    public const string PUNCH3_MOTITION_NAME = "Player Punch3";
     public const string KICK1 = "Kick1";
+    public const string KICK1_MOTITION_NAME = "Player Kick1";
     public const string KICK2 = "Kick2";
+    public const string KICK2_MOTITION_NAME = "Player Kick2";
 
     public const string ATTACK1 = "Attack1";
     public const string ATTACK2 = "Attack2";

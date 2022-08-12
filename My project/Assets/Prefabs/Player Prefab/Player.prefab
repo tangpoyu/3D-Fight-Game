@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1730223216934679664}
   - component: {fileID: 1730223216934679665}
   - component: {fileID: 1730223217529617381}
+  - component: {fileID: 9177024330179743773}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -80,6 +81,20 @@ MonoBehaviour:
   walkSpeed: 2
   zSpeed: 2
   rotationSpeed: 2
+--- !u!114 &9177024330179743773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730223216934679667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25b68067eedf044090ef69af26d4da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  isPlayer: 1
 --- !u!1 &2257892686443787540
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +143,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 1
-  damage: 10
   isPlayer: 1
   isEnemy: 0
   hitFx: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -180,7 +194,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 0.5
-  damage: 50
   isPlayer: 1
   isEnemy: 0
   hitFx: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -232,7 +245,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 0.5
-  damage: 50
   isPlayer: 1
   isEnemy: 0
   hitFx: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -284,7 +296,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 1
-  damage: 10
   isPlayer: 1
   isEnemy: 0
   hitFx: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -415,18 +426,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
   m_PrefabInstance: {fileID: 1730223217566918112}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1730223217529617383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730223217566819054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00f85b335f8c4d4194a065c0fa5defc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &271880422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,3 +442,15 @@ MonoBehaviour:
   rightArmAttackPoint: {fileID: 2257892686443787540}
   leftLegAttackPoint: {fileID: 5381309471287887380}
   rightLegAttackPoint: {fileID: 2743937864664873386}
+--- !u!114 &1730223217529617383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730223217566819054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00f85b335f8c4d4194a065c0fa5defc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

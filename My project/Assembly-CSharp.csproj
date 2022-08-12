@@ -56,14 +56,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Universal Script\AttackPoint.cs" />
     <Compile Include="Assets\Script\Universal Script\AnimationDelegate.cs" />
+    <Compile Include="Assets\Script\Help Script\DeactiveGameObject.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerMovement.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyAnimation.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerAnimation.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyMovement.cs" />
     <Compile Include="Assets\Script\Help Script\TagManager.cs" />
-    <Compile Include="Assets\Script\Help Script\DeactiveGameObject.cs" />
-    <Compile Include="Assets\Script\Universal Script\AttackPoint.cs" />
+    <Compile Include="Assets\Script\Universal Script\HealthScript.cs" />
+    <Compile Include="Assets\Script\Universal Script\CharacterAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\AdditiveTint.shader" />

@@ -70,7 +70,21 @@ public class EnemyMovement : MonoBehaviour
         currentAttackTime += Time.deltaTime;
         if(currentAttackTime > defaultAttackTime)
         {
-            enemyAnimation.Attack(UnityEngine.Random.Range(1, AnimationTags.ATTACK_AIM_COUNT + 1));
+            switch(UnityEngine.Random.Range(0, AnimationTags.ATTACK_AIM_COUNT))
+            {
+                case 0:
+                    enemyAnimation.Punch1();
+                    break;
+
+                case 1:
+                    enemyAnimation.Punch2();
+                    break;
+
+                case 2:
+                    enemyAnimation.Kick1();
+                    break;
+            }
+          
             currentAttackTime = 0;
         }
 

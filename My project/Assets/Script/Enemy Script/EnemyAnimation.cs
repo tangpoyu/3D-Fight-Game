@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimation : MonoBehaviour
+public class EnemyAnimation : MonoBehaviour, CharacterAnimation
 {
     private Animator animator;
 
@@ -16,22 +16,29 @@ public class EnemyAnimation : MonoBehaviour
         animator.SetBool(AnimationTags.WALK, isWalk);
     }
 
-    public void Attack(int id)
+    public void Punch1()
     {
-        switch (id)
-        {
-            case 1:
-                animator.SetTrigger(AnimationTags.ATTACK1);
-                break;
+        animator.SetTrigger(AnimationTags.ATTACK1);
+    }
 
-            case 2:
-                animator.SetTrigger(AnimationTags.ATTACK2);
-                break;
+    public void Punch2()
+    {
+        animator.SetTrigger(AnimationTags.ATTACK2);
+    }
 
-            case 3:
-                animator.SetTrigger(AnimationTags.ATTACK3);
-                break;
-        }
+    public void Punch3()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Kick1()
+    {
+        animator.SetTrigger(AnimationTags.ATTACK3);
+    }
+
+    public void Kick2()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Idle()

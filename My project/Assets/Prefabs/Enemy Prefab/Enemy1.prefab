@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1935918904}
   - component: {fileID: 1935918903}
   - component: {fileID: 1935918905}
+  - component: {fileID: 9040187212921348934}
   m_Layer: 6
   m_Name: Enemy1
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MonoBehaviour:
   speed: 2
   attackDistance: 1
   chasePlayerAfterAttack: 2
+--- !u!114 &9040187212921348934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040187214819452017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25b68067eedf044090ef69af26d4da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  isPlayer: 0
 --- !u!1001 &9040187213899424937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,7 +177,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 87886e989f329e84fbd053fbcaff4f6b, type: 3}
   m_PrefabInstance: {fileID: 9040187213899424937}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9040187212921348934
+--- !u!114 &1649105507266038455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
