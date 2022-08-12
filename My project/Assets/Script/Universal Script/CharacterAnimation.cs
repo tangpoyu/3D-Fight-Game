@@ -10,7 +10,6 @@ interface CharacterAnimation
     void Punch3();
     void Kick1();
     void Kick2();
-    void Idle();
     void KnockDown();
     void StandUp();
     void Hit();

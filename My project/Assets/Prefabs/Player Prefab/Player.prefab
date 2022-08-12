@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
+  defaultAttackTime: 0.4
+  coldTimer: 2
   zSpeed: 2
   rotationSpeed: 2
 --- !u!114 &9177024330179743773

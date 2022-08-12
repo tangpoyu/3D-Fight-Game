@@ -358,6 +358,7 @@
 "Assets/Script/Universal Script/AnimationDelegate.cs"
 "Assets/Script/Universal Script/AttackPoint.cs"
 "Assets/Script/Universal Script/CharacterAnimation.cs"
+"Assets/Script/Universal Script/CharacterMovement.cs"
 "Assets/Script/Universal Script/HealthScript.cs"
 -langversion:9.0
 

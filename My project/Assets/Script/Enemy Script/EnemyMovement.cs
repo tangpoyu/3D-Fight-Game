@@ -3,28 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : CharacterMovement
 {
-    private EnemyAnimation enemyAnimation;
-    private Rigidbody myBody;
-    [SerializeField]
-    private float speed = 5f;
     private Transform playerTarget;
     [SerializeField]
     private float attackDistance = 1f, chasePlayerAfterAttack = 1f;
-    private float currentAttackTime;
-    private float defaultAttackTime = 2f;
     private bool followPlayer, attackPlayer;
 
-    private void Awake()
+    private void Start()
     {
-        enemyAnimation = GetComponentInChildren<EnemyAnimation>();
-        myBody = GetComponent<Rigidbody>();
         playerTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         followPlayer = true;
     }
 
@@ -37,16 +25,16 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // LEARN : What is differense of function between Update and FixedUpdate ?
-        FollowPlayer();
+        Movement();
     }
 
-    private void FollowPlayer()
+    public override void Movement()
     {
         if (!followPlayer)  return;
         
         if(Vector3.Distance(transform.position, playerTarget.position) < attackDistance)
-        { 
-            enemyAnimation.Walk(false);
+        {
+            characterAnimation.Walk(false);
             myBody.velocity = Vector3.zero;
             followPlayer = false;
             attackPlayer = true;
@@ -55,37 +43,37 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             transform.LookAt(playerTarget.position);
-            myBody.velocity = transform.forward * speed;
-            enemyAnimation.Walk(true);
+            myBody.velocity = transform.forward * walkSpeed;
+            characterAnimation.Walk(true);
             followPlayer = true;
             attackPlayer = false;
         }
        
     }
 
-    private void Attack()
+    public override void Attack()
     {
         if(!attackPlayer) return;
 
-        currentAttackTime += Time.deltaTime;
-        if(currentAttackTime > defaultAttackTime)
+        currentAttackTimer += Time.deltaTime;
+        if(currentAttackTimer > defaultAttackTime)
         {
             switch(UnityEngine.Random.Range(0, AnimationTags.ATTACK_AIM_COUNT))
             {
                 case 0:
-                    enemyAnimation.Punch1();
+                    characterAnimation.Punch1();
                     break;
 
                 case 1:
-                    enemyAnimation.Punch2();
+                    characterAnimation.Punch2();
                     break;
 
                 case 2:
-                    enemyAnimation.Kick1();
+                    characterAnimation.Kick1();
                     break;
             }
           
-            currentAttackTime = 0;
+            currentAttackTimer = 0;
         }
 
         if(Vector3.Distance(transform.position, playerTarget.position) > attackDistance + chasePlayerAfterAttack)
@@ -93,5 +81,10 @@ public class EnemyMovement : MonoBehaviour
             attackPlayer = false;
             followPlayer = true;
         }
+    }
+
+    public override void ResetComboState()
+    {
+        throw new NotImplementedException();
     }
 }
