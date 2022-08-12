@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // LEARN : What is differense of function between Update and FixedUpdate ?
         FollowPlayer();
     }
 
