@@ -1,30 +1,30 @@
-# 3D-Fight-Game
+# [3D-Fight-Game](https://tangpoyu.itch.io/test-webgl-build)
 This is project is for learning Unity Game Development.
 
+## Game Objective:
+Infinite reincarnation until you're killed by **ENEMY**
 
 ## Operation of Game:
 
 ### Movement:
 
-*A or LeftArrow* : can move player to left,
+<sub>*A or LeftArrow* : can move player to left,</sub>
 
-*D or RightArrow* : can move player to right,
+<sub>*D or RightArrow* : can move player to right,</sub>
 
-*W or UpArrow* : can move player to Up,
+<sub>*W or UpArrow* : can move player to Up,</sub>
 
-*S or DownArror* : can move player to Down.
+<sub>*S or DownArror* : can move player to Down.</sub>
 
 ### Attack:
 
-*Z* : Normal Punch, 
+<sub>*ONE Z*: Normal Punch,</sub>
 
-*ZZ*: Medium Punch,
+<sub>*DOUBLE Z*: Medium Punch,</sub>
 
-*ZZZ* : Thump.
+<sub>*TRIPLE Z* : Thump.</sub>
 
-*X* : Normal Kick,
+<sub>*ONE X* : Normal Kick,</sub>
 
-*XX* : Medium Kick,
-
-*XXX* : Hark Kick.
+<sub>*DOUBLE X* : Medium Kick,</sub>
 
