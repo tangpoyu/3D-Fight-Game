@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class CharacterMovement: MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     protected float walkSpeed = 5f;
     protected Rigidbody myBody;
-    internal CharacterAnimation characterAnimation;
+    protected CharacterAnimation characterAnimation;
     protected float currentAttackTimer;
     [SerializeField]
     protected float defaultAttackTime, coldTimer;

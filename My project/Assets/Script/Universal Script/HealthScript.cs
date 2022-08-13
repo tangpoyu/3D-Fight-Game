@@ -40,7 +40,7 @@ public class HealthScript : MonoBehaviour
                 if (Random.Range(0, 2) > 0)
                 {
                     characterAnimation.KnockDown();
-                    Invoke("StandUp", 3f);
+                    Invoke("StandUp", 10f);
                 } else
                 {
     
