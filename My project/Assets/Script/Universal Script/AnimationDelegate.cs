@@ -11,12 +11,14 @@ public class AnimationDelegate : MonoBehaviour
     private AudioClip whooshSound, fallSound, goundHitSound, deadSound;
     private CharacterMovement characterMovement;
     private int originalLayer;
+    private ShakeCamera shakeCamera;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         characterMovement = GetComponentInParent<CharacterMovement>();
         originalLayer = transform.parent.gameObject.layer;
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
     }
 
     public void TurnOnleftArmAttackPoint()
@@ -95,5 +97,10 @@ public class AnimationDelegate : MonoBehaviour
     {
         characterMovement.enabled = true;
         transform.parent.gameObject.layer = originalLayer;
+    }
+
+    public void ShakeCamera()
+    {
+        shakeCamera.ShouldShake = true;
     }
 }
