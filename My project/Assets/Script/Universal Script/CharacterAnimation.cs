@@ -15,4 +15,6 @@ public interface CharacterAnimation
     void StandUp();
     void Hit();
     void Death();
+
+    Animator GetAnimator();
 }

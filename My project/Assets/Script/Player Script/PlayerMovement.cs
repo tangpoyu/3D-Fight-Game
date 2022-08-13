@@ -60,9 +60,13 @@ public class PlayerMovement : CharacterMovement
 
     public override void Attack()
     {
+        string currentAnimation = characterAnimation.GetAnimator().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        if (currentAnimation != AnimationTags.IDLE_ANIMATION) return;
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (currentComboState == ComboState.PUNCH_3 || currentComboState == ComboState.KICK_2) return;
+
             if (currentComboState == ComboState.KICK_1) currentComboState = ComboState.NONE;
             currentComboState++;
             activateTimerToReset = true;

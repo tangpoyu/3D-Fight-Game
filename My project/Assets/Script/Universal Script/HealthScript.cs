@@ -28,7 +28,7 @@ public class HealthScript : MonoBehaviour
             characterAnimation.Death();
             if(isPlayer)
             {
-                // TODO : Enemy's Damage dealing
+                GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
             }
             return;
         }

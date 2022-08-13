@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1730223216934679665}
   - component: {fileID: 1730223217529617381}
   - component: {fileID: 9177024330179743773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
-  defaultAttackTime: 0.4
-  coldTimer: 2
+  defaultAttackTime: 0.8
+  coldTimer: 1
   zSpeed: 2
   rotationSpeed: 2
 --- !u!114 &9177024330179743773
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25b68067eedf044090ef69af26d4da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   isPlayer: 1
 --- !u!1 &2257892686443787540
 GameObject:
@@ -144,7 +144,7 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 64
-  radius: 1
+  radius: 1.5
   isPlayer: 1
   isEnemy: 0
   hitFx: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}

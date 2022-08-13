@@ -63,11 +63,11 @@
     <Compile Include="Assets\Script\Universal Script\CharacterMovement.cs" />
     <Compile Include="Assets\Script\Universal Script\HealthScript.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyAnimation.cs" />
+    <Compile Include="Assets\Script\Camera Script\ShakeCamera.cs" />
     <Compile Include="Assets\Script\Universal Script\CharacterAnimation.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerAnimation.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyMovement.cs" />
     <Compile Include="Assets\Script\Help Script\TagManager.cs" />
-    <Compile Include="Assets\Script\Camera Script\ShakeCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\AdditiveTint.shader" />

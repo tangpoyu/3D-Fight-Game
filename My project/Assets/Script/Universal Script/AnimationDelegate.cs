@@ -103,4 +103,15 @@ public class AnimationDelegate : MonoBehaviour
     {
         shakeCamera.ShouldShake = true;
     }
+
+    public void Dead()
+    {
+        Invoke("DestroyGameObject", 2f);
+    }
+
+    private void DestroyGameObject()
+    {
+        // TODO : Spawn the Enemy
+        Destroy(gameObject);
+    }
 }

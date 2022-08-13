@@ -37,8 +37,11 @@ public class AnimationTags
     public const string KICK2_MOTITION_NAME = "Player Kick2";
 
     public const string ATTACK1 = "Attack1";
+    public const string ENEMY1_ATTACK1 = "Enemy1_Attack1";
     public const string ATTACK2 = "Attack2";
+    public const string ENEMY1_ATTACK2 = "Enemy1_Attack2";
     public const string ATTACK3 = "Attack3";
+    public const string ENEMY1_ATTACK3 = "Enemy1_Attack3";
     public const int ATTACK_AIM_COUNT = 3;
     public const string IDLE_ANIMATION = "Idle";
     public const string KNOCK_DOWN = "KnockDown";

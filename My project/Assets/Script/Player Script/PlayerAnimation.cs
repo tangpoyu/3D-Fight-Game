@@ -65,4 +65,9 @@ public class PlayerAnimation : MonoBehaviour, CharacterAnimation
     {
         animator.SetTrigger(AnimationTags.DEATH);
     }
+
+    public Animator GetAnimator()
+    {
+        return animator; 
+    }
 }

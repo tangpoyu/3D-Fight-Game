@@ -32,11 +32,14 @@ public class AttackPoint : MonoBehaviour
         if (hit.Length > 0)
         {
             float damage;
-            if(isPlayer)
+            //print("current:" + animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+            //print("next: " + animator.GetNextAnimatorClipInfo(0)[0].clip.name);
+            String animationName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            if (isPlayer)
             {
                 Vector3 hitFXPos = transform.position;
                 Instantiate(hitFx, hitFXPos, Quaternion.identity);
-                String animationName = animator.GetNextAnimatorClipInfo(0)[0].clip.name;
+                
                 switch (animationName)
                 {
                     case AnimationTags.PUNCH1_MOTITION_NAME:
@@ -54,19 +57,42 @@ public class AttackPoint : MonoBehaviour
                         break;
 
                     default:
-                        throw new System.NotImplementedException();
+                        damage = 0;
+                        break;
                 }
                 if (animationName == AnimationTags.PUNCH3_MOTITION_NAME 
                     || animationName == AnimationTags.KICK2_MOTITION_NAME)
                 {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
-                    // TODO : Apply damage on Player and update health UI stats by creating health script.
                 }
                 else
                 {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
-                    // TODO : Apply damage on Player and update health UI stats by creating health script.
                 }
+                print(animationName + ":" + damage);
+            }
+
+            if(isEnemy)
+            {
+                switch (animationName)
+                {
+                    case AnimationTags.ENEMY1_ATTACK1:
+                        damage = 10;
+                        break;
+
+                    case AnimationTags.ENEMY1_ATTACK2:
+                        damage = 20;
+                        break;
+
+                    case AnimationTags.ENEMY1_ATTACK3:
+                        damage = 50;
+                        break;
+
+                    default:
+                        damage = 0;
+                        break;
+                }
+                hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
             }
             // print(hit[0].gameObject.name);
             gameObject.SetActive(false);
