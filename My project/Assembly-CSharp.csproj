@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\Player Script\PlayerAnimation.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyMovement.cs" />
     <Compile Include="Assets\Script\Help Script\TagManager.cs" />
+    <Compile Include="Assets\Script\Enemy Script\EnemyManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\AdditiveTint.shader" />

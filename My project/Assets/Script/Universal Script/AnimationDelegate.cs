@@ -111,7 +111,7 @@ public class AnimationDelegate : MonoBehaviour
 
     private void DestroyGameObject()
     {
-        // TODO : Spawn the Enemy
-        Destroy(gameObject);
+        Destroy(GameObject.FindGameObjectsWithTag(gameObject.transform.parent.tag)[0]);
+        EnemyManager.instance.SpawnEnemy();
     }
 }

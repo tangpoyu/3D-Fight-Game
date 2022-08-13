@@ -351,6 +351,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Script/Camera Script/ShakeCamera.cs"
 "Assets/Script/Enemy Script/EnemyAnimation.cs"
+"Assets/Script/Enemy Script/EnemyManager.cs"
 "Assets/Script/Enemy Script/EnemyMovement.cs"
 "Assets/Script/Help Script/DeactiveGameObject.cs"
 "Assets/Script/Help Script/TagManager.cs"
