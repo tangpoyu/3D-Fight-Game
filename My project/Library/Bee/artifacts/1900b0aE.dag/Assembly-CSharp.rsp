@@ -362,6 +362,7 @@
 "Assets/Script/Universal Script/CharacterAnimation.cs"
 "Assets/Script/Universal Script/CharacterMovement.cs"
 "Assets/Script/Universal Script/HealthScript.cs"
+"Assets/Script/Universal Script/HealthUI.cs"
 -langversion:9.0
 
 /deterministic

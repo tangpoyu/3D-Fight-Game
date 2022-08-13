@@ -11,10 +11,12 @@ public class HealthScript : MonoBehaviour
     private bool isDied;
     [SerializeField]
     private bool isPlayer;
+    private HealthUI healthUI;
 
     private void Awake()
     {
         characterAnimation = GetComponentInChildren<CharacterAnimation>();
+        healthUI = GameObject.FindWithTag(Tags.HEALTH_UI).GetComponent<HealthUI>();
     }
 
     public void ApplyDamage(float damage, bool knockDown)
@@ -22,7 +24,13 @@ public class HealthScript : MonoBehaviour
         if (isDied) return;
 
         health -= damage;
-        if(health <= 0)
+
+        if (isPlayer)
+        {
+            healthUI.updateBloodVolumeOnPlayer(health);
+        }
+
+        if (health <= 0)
         {
             isDied = true;
             characterAnimation.Death();
@@ -32,6 +40,8 @@ public class HealthScript : MonoBehaviour
             }
             return;
         }
+
+       
 
         if(!isPlayer)
         {
