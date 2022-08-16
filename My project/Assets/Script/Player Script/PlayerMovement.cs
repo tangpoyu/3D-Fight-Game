@@ -3,12 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Service
 public class PlayerMovement : CharacterMovement
 {
+    [SerializeField]
+    private Joystick joystick; // Controller
+    [SerializeField]
+    private UIBattleController uIBattleController; // Controller
+    [SerializeField]
+    private InputController inputController; // Controller
+
     [SerializeField]
     private float zSpeed, rotationSpeed; 
     private bool activateTimerToReset;
     private ComboState currentComboState;
+
 
     private enum ComboState
     {
@@ -37,11 +46,22 @@ public class PlayerMovement : CharacterMovement
     
     public override void Movement()
     {
-        myBody.velocity = new Vector3(
-            Input.GetAxisRaw(Axis.HORIZONTAL) * -walkSpeed,
-            myBody.velocity.y,
-            Input.GetAxisRaw(Axis.VERTICAL) * -zSpeed
-        );
+        if(!uIBattleController.IsMobileDevice)
+        {
+            myBody.velocity = new Vector3(
+                Input.GetAxisRaw(Axis.HORIZONTAL) * -walkSpeed,
+                myBody.velocity.y,
+                Input.GetAxisRaw(Axis.VERTICAL) * -zSpeed
+                );
+        } else
+        {
+            myBody.velocity = new Vector3 (
+                joystick.Horizontal * -walkSpeed,
+                myBody.velocity.y,
+                joystick.Vertical * -zSpeed
+                );
+        }
+       
 
         if (myBody.velocity != Vector3.zero)
         {
@@ -60,12 +80,16 @@ public class PlayerMovement : CharacterMovement
 
     public override void Attack()
     {
-        string currentAnimation = characterAnimation.GetAnimator().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string currentAnimation = GetCurrentCharacterAnimation();
         if (currentAnimation != AnimationTags.IDLE_ANIMATION) return;
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || inputController.IsZPressed)
         {
-            if (currentComboState == ComboState.PUNCH_3 || currentComboState == ComboState.KICK_2) return;
+            if (currentComboState == ComboState.PUNCH_3 || currentComboState == ComboState.KICK_2)
+            {
+                inputController.IsZPressed = false;
+                return;
+            }
 
             if (currentComboState == ComboState.KICK_1) currentComboState = ComboState.NONE;
             currentComboState++;
@@ -78,12 +102,15 @@ public class PlayerMovement : CharacterMovement
                 currentAttackTimer = coldTimer;
                 characterAnimation.Punch3();
             }
-
+            inputController.IsZPressed = false;
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) || inputController.IsXPressed)
         {
-            if (currentComboState == ComboState.PUNCH_3 || currentComboState == ComboState.KICK_2) return;
-
+            if (currentComboState == ComboState.PUNCH_3 || currentComboState == ComboState.KICK_2)
+            {
+                inputController.IsXPressed = false;
+                return;
+            }
             activateTimerToReset = true;
             currentAttackTimer = defaultAttackTime;
             if (currentComboState == ComboState.KICK_1)
@@ -97,7 +124,7 @@ public class PlayerMovement : CharacterMovement
                 currentComboState = ComboState.KICK_1;
                 characterAnimation.Kick1();
             }
-
+            inputController.IsXPressed = false;
         }
     }
 

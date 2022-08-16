@@ -11,12 +11,12 @@ public class HealthScript : MonoBehaviour
     private bool isDied;
     [SerializeField]
     private bool isPlayer;
+    [SerializeField]
     private HealthUI healthUI;
 
     private void Awake()
     {
         characterAnimation = GetComponentInChildren<CharacterAnimation>();
-        healthUI = GameObject.FindWithTag(Tags.HEALTH_UI).GetComponent<HealthUI>();
     }
 
     public void ApplyDamage(float damage, bool knockDown)
@@ -34,6 +34,7 @@ public class HealthScript : MonoBehaviour
         {
             isDied = true;
             characterAnimation.Death();
+            gameObject.GetComponent<CharacterMovement>().enabled = false;
             if(isPlayer)
             {
                 GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;

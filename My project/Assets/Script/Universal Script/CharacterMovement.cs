@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Service
+
 public abstract class CharacterMovement: MonoBehaviour
 {
     [SerializeField] 
@@ -17,6 +19,12 @@ public abstract class CharacterMovement: MonoBehaviour
         myBody = GetComponent<Rigidbody>();
         characterAnimation = GetComponentInChildren<CharacterAnimation>();
     }
+
+    public string GetCurrentCharacterAnimation()
+    {
+        return characterAnimation.GetAnimator().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+    }
+
     public abstract void Movement();
     public abstract void Attack();
     public abstract void ResetComboState();

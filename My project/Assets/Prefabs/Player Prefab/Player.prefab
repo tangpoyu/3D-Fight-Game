@@ -81,6 +81,9 @@ MonoBehaviour:
   walkSpeed: 2
   defaultAttackTime: 0.8
   coldTimer: 1
+  joystick: {fileID: 0}
+  uIBattleController: {fileID: 0}
+  inputController: {fileID: 0}
   zSpeed: 2
   rotationSpeed: 2
 --- !u!114 &9177024330179743773
@@ -97,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   isPlayer: 1
+  healthUI: {fileID: 0}
 --- !u!1 &2257892686443787540
 GameObject:
   m_ObjectHideFlags: 0
