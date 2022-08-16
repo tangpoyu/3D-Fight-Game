@@ -7,7 +7,13 @@ public class UIBattleController : MonoBehaviour
 {
     [SerializeField]
     private bool isMobileDevice;
+    [SerializeField]
+    private GameObject mobileKeyUI;
 
     public bool IsMobileDevice { get => isMobileDevice; set => isMobileDevice = value; }
-  
+
+    private void Awake()
+    {
+        if(!isMobileDevice) mobileKeyUI.SetActive(false);
+    }
 }
