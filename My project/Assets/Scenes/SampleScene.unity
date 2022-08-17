@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40076e7234b039f4cbd67f60ef6e977a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMobileDevice: 0
+  isMobileDevice: 1
   mobileKeyUI: {fileID: 567373064}
 --- !u!1 &1771353946
 GameObject:
