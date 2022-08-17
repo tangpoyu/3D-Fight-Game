@@ -1,5 +1,6 @@
 # [3D-Fight-Game](https://tangpoyu.itch.io/test-webgl-build)
-This is project is for learning Unity Game Development.
+
+This is project is for learning Unity Game Development.   ( [Mobile Version](https://tangpoyu.itch.io/3dfightgame) )
 
 ## Game Objective:
 Infinite reincarnation until you're killed by **ENEMY**
